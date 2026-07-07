@@ -1,0 +1,12 @@
+{
+  "model": "RandomForestClassifier",
+  "roc_auc": 0.8526893611639373,
+  "average_precision": 0.6759567536715698,
+  "chosen_threshold": 0.24666666666666667,
+  "precision_at_threshold": 0.5035335689045937,
+  "recall_at_threshold": 0.7002457002457002,
+  "f1_at_threshold": 0.5858170606372045,
+  "precision_at_default": 0.7805907172995781,
+  "recall_at_default": 0.45454545454545453,
+  "f1_at_default": 0.5745341614906833
+}
