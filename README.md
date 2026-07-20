@@ -122,3 +122,8 @@ This project includes a FastAPI service that serves the trained model as a real-
 | /predict | POST | Returns churn probability, prediction, and risk tier (low/medium/high), using the tuned 0.247 decision threshold rather than scikit-learn's default 0.5 |
 | /explain | POST | Same as /predict, plus the top 5 SHAP factors driving that specific customer's score |
 
+### Example response screenshot
+
+The /explain endpoint returns not just a prediction, but the specific factors driving it for that customer which is useful for a retention team that needs to justify why someone was flagged:
+
+![API explain endpoint response](images/api_screenshot.png)
