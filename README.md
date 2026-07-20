@@ -108,3 +108,17 @@ Customer-churn-prediction/
 - Gather real retention-campaign cost data to decide definitively between the recall-focused threshold (0.247) and the balanced best-F1 threshold (0.357) used in this project.
 - Try SHAP values for a more granular, per-prediction explanation than global permutation importance offers.
 - Test whether an age x active_member interaction feature (not currently engineered) adds predictive value, following the same logic used for products_active_interaction.
+
+
+## API Deployment
+
+This project includes a FastAPI service that serves the trained model as a real-time REST API, containerized with Docker for portable deployment.
+
+
+### Endpoints
+| Endpoint | Method | Description |
+|---|---|---|
+| /health | GET | Liveness check |
+| /predict | POST | Returns churn probability, prediction, and risk tier (low/medium/high), using the tuned 0.247 decision threshold rather than scikit-learn's default 0.5 |
+| /explain | POST | Same as /predict, plus the top 5 SHAP factors driving that specific customer's score |
+

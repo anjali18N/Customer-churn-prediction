@@ -1,0 +1,29 @@
+# Notebooks & exploration — not needed to run the API
+notebooks/
+images/
+
+# Raw/processed data — the API only needs the trained model, not the training data
+data/
+
+# Don't ship duplicate copies of the model — only models/ is needed
+results/
+
+# Python cruft
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Environment / editor files
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# OS files
+.DS_Store
