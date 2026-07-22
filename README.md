@@ -127,3 +127,5 @@ This project includes a FastAPI service that serves the trained model as a real-
 The /explain endpoint returns not just a prediction, but the specific factors driving it for that customer which is useful for a retention team that needs to justify why someone was flagged:
 
 ![API explain endpoint response](images/api_screenshot.png)
+
+**Live deployment:** http://107.21.197.14:8080 - try `/docs` for the interactive API explorer
