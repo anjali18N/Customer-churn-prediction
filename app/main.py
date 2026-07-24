@@ -15,6 +15,7 @@ Docs (auto-generated):
 """
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 
 from app.model import explain, load_model, predict
 from app.preprocessing import engineer_features
@@ -33,6 +34,10 @@ def startup_event():
     # Load the model once when the container starts, not on every request
     load_model()
 
+@app.get("/", include_in_schema=False)
+def root():
+    # So the bare URL doesn't 404 — sends visitors to the interactive API docs
+    return RedirectResponse(url="/docs")
 
 @app.get("/health")
 def health():
